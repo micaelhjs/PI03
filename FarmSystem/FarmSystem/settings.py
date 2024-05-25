@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-p%w0+*achhxlx@e(n8ib!5(5gqth&ewi)%4lrv^w1myq5w2+)v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.0.0.107', 'localhost', '127.0.0.1']
+# settings.py
 
 
 # Application definition
@@ -40,6 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'paginas.apps.PaginasConfig',
+    'sensores.apps.SensoresConfig',
+    
+    #libs
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +134,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ]
+}
