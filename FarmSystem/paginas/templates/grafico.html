@@ -1,0 +1,62 @@
+{% extends 'modelo.html' %}
+
+    {% block titulo %}
+    <title>Gráfico Medições dos Sensores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    {% endblock %}
+
+    {% block destaque %}
+    <div class="container mt-5">
+        <h2>Gráfico Medições dos Sensores</h2>
+        <canvas id="sensorChart" width="400" height="200"></canvas>
+    </div>
+    {% endblock %}
+
+    {% block conteudo %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var ctx = document.getElementById('sensorChart').getContext('2d');
+            var sensorChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: {{ timestamps|safe }},
+                    datasets: [
+                        {
+                            label: 'Temperatura (°C)',
+                            data: {{ temperatures|safe }},
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1,
+                            fill: false
+                        },
+                        {   
+                            
+                            label: 'Humidade (%)',
+                            data: {{ humidities|safe }},
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            type: 'category',
+                            title: {
+                                display: true,
+                                text: 'Sensores Estação de Medição'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Value'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+{% endblock %}
+
+{% block destaque %}
+<header class="bg-success text-white text-center p-3">
+    <h1>Bem-vindo à Farm System!</h1>
+</header>
+{% endblock %}
+
+{% block conteudo %}
+
+  <!-- teste -->
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="5000">
+          <center>
+
+              <img src="{% static 'img/logo.png' %}" class="d-block w-50" alt="...">
+            </center>
+            <br>
+            <br>
+            <br>
+            <br>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Farm System</h5>
+          <p>Farm System é uma empresa inovadora no setor de monitoramento de agronegócio, dedicada a fornecer soluções tecnológicas avançadas para a gestão eficiente e sustentável das atividades agrícolas. Nossa missão é transformar dados em insights valiosos, ajudando produtores rurais a otimizar suas operações e aumentar a produtividade.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+    <center>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="https://www.embrapa.br/vii-plano-diretor/agricultura-oportunidades-e-desafios"><img src="{% static 'img/agricultura.jpg' %}" class="d-block w-50" alt="..."></a>
+    </center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Agricultura: oportunidades e desafios</h5>
+          <p>O VII Plano diretor da Embrapa relata quais são os desafios e oportunidades da agricultura no Brasil, para quem se interessa pela area é uma leitura obrigatória que evidência como iniciativas com a farmSystem são impressindíveis nos dias atuais.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+    <center>
+        <a href="https://github.com/micaelhjs/PI03"><img src="{% static 'img/github.png' %}" class="d-block w-50" alt="..." ></a>
+    </center>
+    <br>
+    <br>
+    <br>
+    <br>        
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Confira nosso GitHub!</h5>
+          <p>No GitHub é possível ver como esse projeto foi desenvolvido pela nossa equipe.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<center>
+    <div class="container mt-4">
+        
+                <!-- Adicionando botões -->
+                <a href="{% url 'quem_somos' %}"><button type="button" class="btn btn-success">Quem somos</button></a>
+                <a href="{% url 'grafico' %}"><button type="button" class="btn btn-success">Gráficos</button></a>
+                <a href="{% url 'contatos' %}"><button type="button" class="btn btn-success">Contatos</button></a>
+                
+            
+    </div>
+</center>
+{% endblock %}

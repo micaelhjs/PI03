@@ -1,0 +1,64 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    <title>Minha Página com Botões Bootstrap</title>
+    
+{% endblock %}
+
+{% block destaque %}
+    <header class="bg-success text-white text-center p-3">
+        <h1>Contatos</h1>
+    </header>
+{% endblock %}
+
+{% block conteudo %}
+    <main class="container mt-4">
+        
+        <center>
+            <br>
+        <h2>Fale conosco e siga-nos nas redes socias</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h5>
+
+
+
+            <br>
+            Email: contato@farmsystem.com <img src="{% static 'img/email.png' %}" alt="Email" width="20px">
+            <br>
+
+            <br>
+            Telefone: +55 (11) 3227 - 1703 <img src="{% static 'img/telefone.png' %}" alt="Telefone" width="20px">
+            <br>
+            <br>
+             São Paulo, SP, Brasil
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>    <br>
+            <br>
+            <br>
+            <br>
+            <br>        
+           <h6>@farmsystem</h6>
+
+    
+            <figure>
+                <img src="{% static 'img/facebook.png' %}" alt="facebook" width="20px">
+                <img src="{% static 'img/instagram.png' %}" alt="instagram" width="20px">
+                <img src="{% static 'img/github.png' %}" alt="github" width="20px">
+            </figure>
+            </h5>
+        </center>
+    </main>
+
+
+
+{% endblock %}
